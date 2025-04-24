@@ -1,8 +1,9 @@
 echo off
 
-set /P filepathname="Path to map bsp: "
-
-set /P outputdirname="Output dir: "
+REM set /P filepathname="Path to map bsp: "
+set filepathname=%1
+REM set /P outputdirname="Output dir: "
+set outputdirname=%2
 
 echo .
 echo converting map to gltf...

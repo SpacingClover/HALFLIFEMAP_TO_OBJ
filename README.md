@@ -14,7 +14,9 @@ Blender 4.0.1 or later
 USAGE:
 
 Convert halflife .bsp maps into .obj files with texture refs to the local /texures folder (as .dds)
-Provide absolute path to .bsp to first prompt (not taken as env var)
+
+Use via terminal with: absolute path to .bsp, output dir
+
 Theoretically compatible with all goldsrc maps, not tested, may take some finagling
 If you DONT want .dds textures, you can edit the .bat fairly easily
 If you DONT want a .obj file, the hlbsp_converter is included in it's entirety
