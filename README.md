@@ -15,7 +15,8 @@ USAGE:
 
 Convert halflife .bsp maps into .obj files with texture refs to the local /texures folder (as .dds)
 
-Use via terminal with: absolute path to .bsp, output dir
+Use via terminal with: absolute path to .bsp, output dir; such as:
+bsp2obj.bat "path_to_maps/c1a0.bsp" "documents/maps/"
 
 Theoretically compatible with all goldsrc maps, not tested, may take some finagling
 If you DONT want .dds textures, you can edit the .bat fairly easily
