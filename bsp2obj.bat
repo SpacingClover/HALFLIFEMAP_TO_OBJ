@@ -5,6 +5,8 @@ set filepathname=%1
 REM set /P outputdirname="Output dir: "
 set outputdirname=%2
 
+
+
 echo .
 echo converting map to gltf...
 echo .
@@ -25,15 +27,16 @@ echo fixing texure refs...
 echo .
 
 for %%f in (%~dp0\*.gltf) do (
-	%~dp0\scripts\fix_image_refs.exe %%f "%~dp0textures/"
+	pause
+	%~dp0\scripts\fix_image_refs.exe %%f "%~dp0\textures\
 	
 	echo .
 	echo converting map to obj/mtl...
 	echo .
 	
-	"%ProgramFiles%\Blender Foundation\Blender 4.0\blender.exe" -b "%~dp0\scripts\empty.blend" -P "%~dp0\scripts\convert_to_obj.py" -- %%f %outputdirname% /f >nul 2>&1
+	"%ProgramFiles%\Blender Foundation\Blender 4.0\blender.exe" -b "%~dp0\scripts\empty.blend" -P "%~dp0\scripts\convert_to_obj.py" -- %%f %outputdirname%
 )
-
+pause
 for %%f in (%~dp0\*.gltf) do (
 	del %%f
 )
@@ -46,4 +49,4 @@ for %%f in (%~dp0\*.png) do (
 	del %%f
 )
 
-pause
+REM pause
